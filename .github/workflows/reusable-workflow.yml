@@ -1,11 +1,12 @@
 name: Reusable Workflow
-on: workflow_call
-  inputs:
-    artifact_name:
-      description: Name of the artifact to upload
-      required: true
-      default: myfile
-      type: string
+on: 
+  workflow_call
+    inputs:
+      artifact_name:
+        description: Name of the artifact to upload
+        required: true
+        default: myfile
+        type: string
 jobs:
   deploy:
     runs-on: ubuntu-latest
