@@ -7,6 +7,9 @@ jobs:
       matrix:
         os-version: [ubuntu-latest, windows-latest]
         node-version: [16, 18, 20]
+        exclude:
+          - os-version: windows-latest
+            node-version: 16
     runs-on: ${{ matrix.os-version }}
     steps:
       - name: Checkout code
